@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0px;
+    font-family: 'segoe ui';
+    background: aliceblue;
+  }
+
+  
+   /* Header */
+
+   .nav-logo{
+    max-width: 100%;
+    width: 19%;
+   }
+
+   .nav {
+    height: 70px;
+    width: 100%;
+    background-color: #5da75d;
+    position: relative;
+    box-shadow: 0px 0px 10px black;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: flex;
+    font-size: 18px;
+    margin-left: 10%;
+    align-items: center;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+
+  /* Acceuil */
+  .titleacc{
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    background: #000000b5;
+    color: white;
+    padding: 77px;
+    margin: 27px;
+    border-radius: 8px;
+  }
+
+  .titleacc h1{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    font-size: 47px;
+    line-height: 4.875rem;
+}
+
+
+  .btninsc{
+    background: #02bc02;
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    padding: 6px;
+  }
+
+  .btninsc a{
+    text-decoration: none;
+    color: white;
+  }
+
+
+   .imgacc{
+    max-width: 100%;
+   }
+
+   
+   
+  /* Form Candidat */
+
+  .cells{
+    width: 500px;
+  }
+
+  .next{
+  margin: 30px;
+  margin-left: 67%;
+  }
+
+  .prev , .finish{
+    margin: 30px;
+  }
+
+
+.formcand {
+  width: 69%;
+  padding: 20px;
+  margin: 70px;
+  margin-left: 15%;
+  background: #5da75d;
+  box-shadow: 0px 0px 3px black;
+  border-radius: 15px;
+}
+
+.page{
+  display: none;
+}
+
+header{
+  display: flex;
+  justify-content: space-around;
+  margin: 25px;
+}
+
+.page-num{
+  border: 1px solid blue;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 6px;
+}
+
+.active{
+  color: white;
+  background-color: blue;
+}
+  
+  h1{
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+  }
+
+  .btnco{
+    display: flex;
+    justify-content: center;
+  }
+
+  .titleinsc h1{
+
+  }
+
+  form{
+    margin-left: 111px;
+    width: 54%;
+  }
+
+
+input{
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}
+
+
+
+
+
+  @media (max-width:1000px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
